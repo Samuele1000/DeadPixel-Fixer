@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Reparatie - DeadPixel Fixer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #fullScreenFix {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: none;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        .warning-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid var(--accent-red);
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            color: #f87171;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gradient-bg"></div>
+
+    <header>
+        <a href="index.html" class="logo">DeadPixel.FIX</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="check.html">Pixel Tester</a></li>
+                <li><a href="fix.html">Pixel Reparatie</a></li>
+                <li><a href="about.html">Uitleg</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tool-container">
+        <div class="badge">Repair Module</div>
+        <h1>Pixel Reparatie</h1>
+
+        <div class="warning-box">
+            <strong>VEILIGHEIDSWAARSCHUWING:</strong> Bevat snel knipperende beelden. Niet gebruiken bij gevoeligheid
+            voor epilepsie.
+        </div>
+
+        <p style="margin-bottom: 3rem; color: var(--text-dim);">Sleep het onderstaande vlak over de defecte pixel of
+            start de volledige scherm modus voor een intensieve sessie.</p>
+
+        <div class="fix-area" id="resizableFix">
+            <div class="flashing-pixel" id="pixelFlashing"></div>
+        </div>
+
+        <div style="margin-top: 4rem;">
+            <button id="toggleFullScreenFix" class="btn btn-primary">Start Full-Screen Fix</button>
+            <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-dim);">Aanbevolen duur: 15-30 minuten
+                per sessie.</p>
+        </div>
+    </main>
+
+    <div id="fullScreenFix"></div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

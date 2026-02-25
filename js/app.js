@@ -1,3 +1,53 @@
+// --- DEVICE DETECTION AND BLOCKER ---
+function detectDevice() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+    // Check user agent for mobile/tablet
+    const mobileRegex = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i;
+    const isUserAgentMobile = mobileRegex.test(userAgent);
+    
+    // Check touch points (tablets often have touch)
+    const isTouchDevice = () => {
+        return (('ontouchstart' in window) ||
+                (navigator.maxTouchPoints > 0) ||
+                (navigator.msMaxTouchPoints > 0));
+    };
+    
+    // Check screen width/height ratio to detect mobile/tablet
+    const isSmallScreen = window.innerWidth <= 1024 || window.innerHeight <= 768;
+    
+    // More comprehensive mobile detection
+    const isMobileOrTablet = isUserAgentMobile || 
+                            (isTouchDevice() && isSmallScreen);
+    
+    return isMobileOrTablet;
+}
+
+// Block access for mobile/tablet devices
+function blockMobileAccess() {
+    if (detectDevice()) {
+        const modal = document.getElementById('deviceBlockerModal');
+        if (modal) {
+            modal.style.display = 'flex';
+            // Prevent scrolling
+            document.body.style.overflow = 'hidden';
+            // Prevent all interactions with the page
+            document.body.style.pointerEvents = 'none';
+            modal.style.pointerEvents = 'auto';
+        }
+    }
+}
+
+// Run device blocker immediately on load
+document.addEventListener('DOMContentLoaded', () => {
+    blockMobileAccess();
+});
+
+// Also check on resize in case device orientation changes
+window.addEventListener('resize', () => {
+    blockMobileAccess();
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // --- PIXEL TESTER LOGIC ---
     const startTestBtn = document.getElementById('startTest');

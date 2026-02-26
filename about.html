@@ -11,20 +11,32 @@
     <link rel="stylesheet" href="css/style.css">
     <style>
         .article {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             text-align: left;
-            padding: 2rem;
+            padding: 1rem 2rem;
         }
 
         .article h2 {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 0.6rem;
             color: var(--primary);
+            font-size: 1.6rem;
         }
 
         .article p {
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .article ul {
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .article li {
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
@@ -53,36 +65,65 @@
         </nav>
     </header>
 
-    <main class="article" style="margin-top: 10rem;">
+    <main class="article" style="margin-top: 2rem;">
         <div class="badge">Documentation</div>
-        <h1 style="font-size: 3rem; margin-bottom: 2rem;">Wat zijn Dead Pixels?</h1>
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Wat zijn Dead Pixels?</h1>
 
-        <p style="font-size: 1.1rem; color: var(--text-dim); margin-bottom: 2rem;">Een modern scherm bestaat uit
+        <p style="font-size: 1.1rem; color: var(--text-dim); margin-bottom: 1.5rem;">Een modern scherm bestaat uit
             miljoenen kleine lichtpunten, genaamd pixels. Elk van deze punten is verantwoordelijk voor het tonen van de
             juiste kleur. Wanneer dit proces verstoord wordt, ontstaan er visuele defecten.</p>
 
-        <div class="card reveal" style="margin-bottom: 2rem;">
+        <div class="card reveal" style="margin-bottom: 1rem;">
             <h2>Dead Pixels vs Stuck Pixels</h2>
-            <p>Een <strong>Dead Pixel</strong> is fysiek defect en blijft meestal zwart. Een <strong>Stuck
-                    Pixel</strong> zit vast op een kleur (rood, groen of blauw) en kan vaak gereactiveerd worden door
-                stimulatie.</p>
+            <p>Een <strong>Dead Pixel</strong> is fysiek defect en blijft meestal zwart. Dit gebeurt wanneer de transistor die het pixel controleert, volledig is uitgevallen. Een <strong>Stuck Pixel</strong> daarentegen zit vast op een kleur (rood, groen of blauw) en kan vaak gereactiveerd worden door stimulatie.</p>
+            <p>Het belangrijke verschil: dead pixels kunnen zelden worden gerepareerd omdat de hardware permanent beschadigd is, terwijl stuck pixels vaak kunnen worden 'opgewekt' door repetitieve kleurveranderingen.</p>
         </div>
 
-        <div class="card reveal" style="margin-bottom: 2rem;">
+        <div class="card reveal" style="margin-bottom: 1rem;">
+            <h2>Waarom ontstaan Dead Pixels?</h2>
+            <p>Dead pixels kunnen ontstaan door verschillende oorzaken:</p>
+            <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                <li><strong>Productiefouten:</strong> Kleine defecten vlak na fabricage van het scherm</li>
+                <li><strong>Temperatuurfluctuaties:</strong> Overmatige hitte of kou kan componenten beschadigen</li>
+                <li><strong>Slechte behandeling:</strong> Fysieke druk of drukgolven op het scherm</li>
+                <li><strong>Veroudering:</strong> Normale slijtage na jaren van gebruik</li>
+            </ul>
+        </div>
+
+        <div class="card reveal" style="margin-bottom: 1rem;">
             <h2>Hoe werkt onze technologie?</h2>
-            <p>Onze <strong>Repair Module</strong> maakt gebruik van hoogfrequente kleurwisselingen en ruispatronen. Dit
-                'schudt' de vloeibare kristallen in het LCD-paneel wakker, waardoor ze weer in hun normale staat
-                terugkeren.</p>
+            <p>Onze <strong>Repair Module</strong> maakt gebruik van geavanceerde reparatietechnieken specifiek ontworpen voor LCD-schermen:</p>
+            <p><strong>Mechanisme:</strong> Het systeem creëert hoogfrequente kleurwisselingen en ruispatronen. Dit 'schudt' de vloeibare kristallen in het LCD-paneel wakker, waardoor ze uit hun defecte staat worden bevrijd en weer in hun normale positie terugkeren.</p>
+            <p><strong>Effectiviteit:</strong> Deze methode werkt het best op stuck pixels in de eerste fase. De success-rate hangt af van hoe lang het pixel al vast zit en de aard van het defect.</p>
         </div>
 
-        <div style="margin-top: 4rem; text-align: center;">
+        <div class="card reveal" style="margin-bottom: 1rem;">
+            <h2>Hoe gebruik je DeadPixel.FIX?</h2>
+            <p><strong>Stap 1 - Diagnose:</strong> Gebruik de Pixel Tester om het probleem nauwkeurig te identificeren. Dit helpt bepalen of je een dead pixel of stuck pixel hebt.</p>
+            <p><strong>Stap 2 - Locatie bepalen:</strong> Noteer exact waar het defecte pixel zich op je scherm bevindt.</p>
+            <p><strong>Stap 3 - Reparatie:</strong> Laad de Pixel Reparatie tool en voer het reparatieproces uit. Dit werkt het best in een donkere kamer voor maximum zichtbaarheid.</p>
+            <p><strong>Stap 4 - Geduld:</strong> Het reparatieproces kan 10-30 minuten duren. Onderbreking kan het proces minder effectief maken.</p>
+        </div>
+
+        <div class="card reveal" style="margin-bottom: 1rem;">
+            <h2>Wat zijn de beperkingen?</h2>
+            <p>Het is belangrijk te weten dat:</p>
+            <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                <li>Stuck pixels hebben een veel hoger succespercentage (60-80%) dan dead pixels (10-20%)</li>
+                <li>Volledig verbrande pixels kunnen niet worden gerepareerd</li>
+                <li>Zeer oude schermen reageren minder goed op de behandeling</li>
+                <li>Sommige fabrikanten gebruiken andere technologieën waarvoor dit minder effectief is</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 2rem; text-align: center;">
             <a href="check.html" class="btn btn-primary">Start Diagnose</a>
             <a href="fix.html" class="btn btn-outline">Reparatie Tool</a>
         </div>
     </main>
 
     <footer
-        style="padding: 4rem 5%; text-align: center; border-top: 1px solid var(--glass-border); background: rgba(3,7,18,0.5); margin-top: 4rem;">
+        style="padding: 2rem 5%; text-align: center; border-top: 1px solid var(--glass-border); background: rgba(3,7,18,0.5); margin-top: 2rem;">
         <div class="logo" style="font-size: 1.25rem; margin-bottom: 1rem; display: inline-block;">DeadPixel.FIX</div>
         <p style="color: var(--text-dim); font-size: 0.85rem; max-width: 500px; margin: 0 auto;">&copy; 2026 De meest
             betrouwbare online tool voor schermonderhoud. Gebouwd voor een kristalheldere visuele ervaring.</p>

@@ -305,7 +305,7 @@ nav a:hover::after {
 
 .card {
     background: var(--bg-card);
-    padding: 3rem;
+    padding: 1.5rem;
     border-radius: 32px;
     border: 1px solid var(--glass-border);
     backdrop-filter: blur(20px);
